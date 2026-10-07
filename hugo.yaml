@@ -1,0 +1,19 @@
+baseURL: "https://vera-lab-polyu.github.io/"
+languageCode: "en-us"
+title: "VERA Lab"
+enableRobotsTXT: true
+disableKinds: [taxonomy, term, RSS]
+
+params:
+  lab_name: "VERA Lab"
+  short_name: "VERA"
+  descriptor: "Trustworthy & Collaborative Intelligence"
+  affiliation: "The Hong Kong Polytechnic University"
+  description: "Trustworthy and collaborative intelligence across data, models, agents, and domains."
+  contact_email: "yang-veronica.liu@polyu.edu.hk"
+  principal_investigator: "Prof. Yang (Veronica) Liu"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

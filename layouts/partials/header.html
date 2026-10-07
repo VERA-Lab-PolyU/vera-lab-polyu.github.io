@@ -1,0 +1,18 @@
+<header class="site-header" data-header>
+  {{ $current := .RelPermalink }}
+  <div class="shell header-inner">
+    <a class="wordmark" href="{{ site.Home.RelPermalink }}" aria-label="{{ site.Params.lab_name }} home">
+      <span>{{ site.Params.lab_name }}</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+      <span>Menu</span><i aria-hidden="true"></i>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-menu>
+      <a{{ if eq $current (relURL "research/") }} class="is-active" aria-current="page"{{ end }} href="{{ relURL "research/" }}">Research</a>
+      <a{{ if eq $current (relURL "people/") }} class="is-active" aria-current="page"{{ end }} href="{{ relURL "people/" }}">People</a>
+      <a{{ if eq $current (relURL "publications/") }} class="is-active" aria-current="page"{{ end }} href="{{ relURL "publications/" }}">Publications</a>
+      <a{{ if eq $current (relURL "news/") }} class="is-active" aria-current="page"{{ end }} href="{{ relURL "news/" }}">News</a>
+      <a class="nav-cta{{ if eq $current (relURL "join/") }} is-active{{ end }}"{{ if eq $current (relURL "join/") }} aria-current="page"{{ end }} href="{{ relURL "join/" }}">Join us <span aria-hidden="true">↗</span></a>
+    </nav>
+  </div>
+</header>

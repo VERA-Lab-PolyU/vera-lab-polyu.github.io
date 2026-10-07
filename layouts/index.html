@@ -1,0 +1,66 @@
+{{ define "main" }}
+<section class="academic-hero" aria-labelledby="hero-title">
+  <div class="shell academic-hero-intro">
+    <div class="academic-hero-copy" data-reveal>
+      <p class="eyebrow">{{ site.Params.descriptor }}</p>
+      <h1 id="hero-title">VERA Lab</h1>
+      <p class="academic-tagline">Trustworthy &amp; Collaborative Intelligence</p>
+      <p class="academic-intro">We study how data, models, and people can learn together while preserving privacy, reliability, and practical value. Our work spans federated learning, trustworthy AI, model collaboration, and applications in healthcare, science, and industry.</p>
+      <div class="academic-links">
+        <a href="{{ relURL "research/" }}">Research</a>
+        <a href="{{ relURL "people/" }}">People</a>
+        <a href="{{ relURL "publications/" }}">Publications</a>
+        <a href="{{ relURL "join/" }}">Join the lab</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-people section" aria-labelledby="home-people-title">
+  <div class="shell">
+    <div class="section-title-row" data-reveal>
+      <div><p class="eyebrow">People</p><h2 id="home-people-title">Our lab</h2></div>
+      <a href="{{ relURL "people/" }}">Meet everyone →</a>
+    </div>
+    <div class="home-people-group">
+      <h3>Faculty</h3>
+      <div class="home-people-grid home-people-grid--faculty">
+        {{ range site.Data.members.leadership }}{{ partial "home-person.html" . }}{{ end }}
+        {{ range site.Data.members.advisors }}{{ partial "home-person.html" . }}{{ end }}
+      </div>
+    </div>
+    <div class="home-people-group">
+      <h3>Postdoctoral Fellow</h3>
+      <div class="home-people-grid home-people-grid--postdocs">
+        {{ range site.Data.members.postdocs }}{{ partial "home-person.html" . }}{{ end }}
+      </div>
+    </div>
+    <div class="home-people-group">
+      <h3>PhD Students</h3>
+      <div class="home-people-grid">
+        {{ range site.Data.members.members }}{{ partial "home-person.html" . }}{{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-overview section" aria-label="Research and news">
+  <div class="shell home-overview-grid">
+    <div data-reveal>
+      <div class="section-title-row"><div><p class="eyebrow">Research</p><h2>Research directions</h2></div><a href="{{ relURL "research/" }}">View research →</a></div>
+      <div class="home-research-list">{{ range site.Data.research }}<article><h3>{{ .title }}</h3><p>{{ .summary }}</p></article>{{ end }}</div>
+    </div>
+    <div data-reveal>
+      <div class="section-title-row"><div><p class="eyebrow">Updates</p><h2>Latest news</h2></div><a href="{{ relURL "news/" }}">All news →</a></div>
+      <div class="home-news-list">{{ range first 4 site.Data.news }}<a href="{{ .url }}" target="_blank" rel="noreferrer"><time>{{ .date }}</time><span>{{ .title }}</span></a>{{ end }}</div>
+    </div>
+  </div>
+</section>
+
+<section class="featured academic-publications" aria-labelledby="featured-title">
+  <div class="shell">
+    <div class="section-title-row" data-reveal><div><p class="eyebrow">Selected publications</p><h2 id="featured-title">Recent work</h2></div><a href="{{ relURL "publications/" }}">View all publications →</a></div>
+    <div class="paper-list paper-list--home">{{ range first 3 site.Data.publications }}{{ partial "publication-card.html" (dict "publication" . "heading" "h3") }}{{ end }}</div>
+  </div>
+</section>
+{{ end }}

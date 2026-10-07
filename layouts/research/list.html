@@ -1,0 +1,6 @@
+{{ define "main" }}
+{{ partial "page-hero.html" . }}
+<section class="research section detail-section" aria-label="Research directions"><div class="shell"><div class="research-card-grid">
+  {{ range site.Data.research }}<article class="research-card" data-reveal><span>{{ .number }}</span><h2>{{ .title }}</h2><p>{{ .summary }}</p><ul class="topic-list" aria-label="Topics">{{ range .topics }}<li>{{ . }}</li>{{ end }}</ul></article>{{ end }}
+</div><p class="section-end-link"><a href="{{ relURL "publications/" }}">See selected publications →</a></p></div></section>
+{{ end }}

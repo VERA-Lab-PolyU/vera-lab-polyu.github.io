@@ -1,0 +1,6 @@
+{{ define "main" }}
+{{ partial "page-hero.html" . }}
+<section class="publications section detail-section"><div class="shell">
+  <div class="paper-list paper-list--archive">{{ range site.Data.publications }}{{ partial "publication-card.html" (dict "publication" . "heading" "h2") }}{{ end }}</div>
+</div></section>
+{{ end }}

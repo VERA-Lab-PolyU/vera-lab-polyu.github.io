@@ -1,0 +1,8 @@
+{{ define "main" }}
+{{ partial "page-hero.html" . }}
+<section class="join-page section detail-section"><div class="shell join-page-grid"><div class="join-roles" data-reveal><p class="join-note">We welcome applicants whose interests connect with the lab's research. Please read our recent work before contacting us.</p>
+  <article><span>01</span><h2>Ph.D. Students</h2><p>For applicants interested in federated learning, trustworthy AI, collaborative models, or domain applications.</p></article>
+  <article><span>02</span><h2>Postdoctoral Researchers</h2><p>For independent researchers developing a focused agenda that connects with the group's core questions.</p></article>
+  <article><span>03</span><h2>Interns & Research Engineers</h2><p>For students and engineers who want to build, evaluate, and open-source rigorous learning systems.</p></article>
+</div><aside class="contact-card" data-reveal><p class="eyebrow">Contact</p><h2>How to apply</h2><p>Email a concise introduction, your research interests, and a CV or homepage link.</p><a class="button button--primary" href="mailto:{{ site.Params.contact_email }}">Email Prof. Liu</a><small>{{ site.Params.contact_email }}</small></aside></div></section>
+{{ end }}

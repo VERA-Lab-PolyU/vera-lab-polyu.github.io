@@ -1,0 +1,7 @@
+{{ $person := . }}
+<div class="avatar avatar--{{ $person.accent | default "blue" }}">
+  <span aria-hidden="true">{{ $person.initials }}</span>
+  {{ with $person.photo }}
+    <img src="{{ . }}" alt="{{ $person.name }}" loading="lazy"{{ with $person.photo_position }} style="object-position: {{ . }}"{{ end }} data-avatar-image>
+  {{ end }}
+</div>

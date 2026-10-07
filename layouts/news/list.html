@@ -1,0 +1,4 @@
+{{ define "main" }}
+{{ partial "page-hero.html" . }}
+<section class="news section detail-section"><div class="shell news-page-list">{{ range site.Data.news }}<a href="{{ .url }}" target="_blank" rel="noreferrer" data-reveal><time>{{ .date }}</time><span class="news-label">{{ .label }}</span><h2>{{ .title }}</h2><i aria-hidden="true">↗</i></a>{{ end }}</div></section>
+{{ end }}

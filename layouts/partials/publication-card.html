@@ -1,0 +1,14 @@
+{{- $paper := .publication -}}
+{{- $heading := .heading | default "h2" -}}
+<article class="paper-card" data-reveal>
+  <a class="paper-visual" href="{{ $paper.primary_url }}" target="_blank" rel="noreferrer" aria-label="Read {{ $paper.title }}">
+    <span class="paper-venue-badge">{{ $paper.venue }}</span>
+    <span class="paper-image-frame"><img src="{{ $paper.image }}" alt="{{ $paper.image_alt }}" loading="lazy"></span>
+  </a>
+  <div class="paper-content">
+    {{ if eq $heading "h3" }}<h3><a href="{{ $paper.primary_url }}" target="_blank" rel="noreferrer">{{ $paper.title }}</a></h3>{{ else }}<h2><a href="{{ $paper.primary_url }}" target="_blank" rel="noreferrer">{{ $paper.title }}</a></h2>{{ end }}
+    <p class="paper-authors">{{ $paper.authors }}</p>
+    <p class="paper-venue">{{ $paper.venue }}{{ with $paper.note }} <span>· {{ . }}</span>{{ end }}</p>
+    <div class="publication-links">{{ range $paper.links }}<a href="{{ .url }}" target="_blank" rel="noreferrer">{{ .label }} ↗</a>{{ end }}</div>
+  </div>
+</article>

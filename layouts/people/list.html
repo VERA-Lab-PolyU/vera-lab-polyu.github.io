@@ -1,0 +1,26 @@
+{{ define "main" }}
+{{ partial "page-hero.html" . }}
+<section class="people-directory section detail-section" aria-label="Lab members">
+  <div class="shell">
+    <section class="directory-group" aria-labelledby="faculty-heading">
+      <h2 id="faculty-heading">Faculty</h2>
+      <div class="directory-grid">
+        {{ range site.Data.members.leadership }}{{ partial "directory-person.html" . }}{{ end }}
+        {{ range site.Data.members.advisors }}{{ partial "directory-person.html" . }}{{ end }}
+      </div>
+    </section>
+    <section class="directory-group" aria-labelledby="postdoc-heading">
+      <h2 id="postdoc-heading">Postdoctoral Fellow</h2>
+      <div class="directory-grid">
+        {{ range site.Data.members.postdocs }}{{ partial "directory-person.html" . }}{{ end }}
+      </div>
+    </section>
+    <section class="directory-group" aria-labelledby="phd-heading">
+      <h2 id="phd-heading">PhD Students</h2>
+      <div class="directory-grid">
+        {{ range site.Data.members.members }}{{ partial "directory-person.html" . }}{{ end }}
+      </div>
+    </section>
+  </div>
+</section>
+{{ end }}

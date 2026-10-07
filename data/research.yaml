@@ -1,0 +1,20 @@
+- number: "01"
+  title: "Federated & Private Learning"
+  summary: "Learning across organizations and data silos without centralizing sensitive data."
+  topics: [Federated learning, Privacy-preserving ML, Heterogeneous learning]
+
+- number: "02"
+  title: "Collaborative Models & Agents"
+  summary: "Enabling models and autonomous agents with different capabilities to learn, reason, and act together."
+  topics: [Foundation models, Collaborative agents, Large–small model collaboration]
+
+- number: "03"
+  title: "Trustworthy Data & Intelligence"
+  summary: "Building reliable learning systems under privacy, security, and data-access constraints."
+  topics: [Private data synthesis, Robust learning, Trustworthy AI]
+
+- number: "04"
+  title: "AI Across Domains"
+  summary: "Translating collaborative intelligence into scientific, healthcare, and industrial settings."
+  topics: [AI for science, Healthcare AI, Industrial applications]
+

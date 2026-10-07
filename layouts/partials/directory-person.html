@@ -1,0 +1,9 @@
+{{ $person := . }}
+<article class="directory-person" data-reveal>
+  {{ with $person.profile }}<a class="directory-person-photo" href="{{ . }}" target="_blank" rel="noreferrer" aria-label="Open {{ $person.name }}'s profile">{{ partial "avatar.html" $person }}</a>{{ else }}<div class="directory-person-photo">{{ partial "avatar.html" $person }}</div>{{ end }}
+  <p class="person-role">{{ $person.role }}</p>
+  <h2>{{ with $person.profile }}<a href="{{ . }}" target="_blank" rel="noreferrer">{{ $person.name }}</a>{{ else }}{{ $person.name }}{{ end }}</h2>
+  <p class="member-affiliation">{{ $person.affiliation }}</p>
+  {{ with $person.note }}<p class="member-note">{{ . }}</p>{{ end }}
+  {{ partial "profile-icon-links.html" $person }}
+</article>

@@ -125,6 +125,8 @@ members:
     role: "Ph.D. Student"
     affiliation: "Tsinghua University"
     focus: "Split learning · Foundation models"
+    photo: "/images/people/zixuan-gu.jpg"
+    photo_source: "Lab group members slide"
     profile: "https://openreview.net/profile?id=~Zixuan_GU1"
     links:
       - label: "OpenReview"
@@ -136,7 +138,7 @@ members:
   - name: "Rui Teng"
     initials: "RT"
     role: "Incoming Ph.D. Student"
-    affiliation: "Peking Union Medical College"
+    affiliation: "Tsinghua University & The Hong Kong Polytechnic University"
     note: "Fall 2027"
     photo: "/images/people/rui-teng-avatar.jpg"
     photo_source: "Photo provided by the lab"

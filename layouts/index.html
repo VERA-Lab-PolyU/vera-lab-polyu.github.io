@@ -2,10 +2,9 @@
 <section class="academic-hero" aria-labelledby="hero-title">
   <div class="shell academic-hero-intro">
     <div class="academic-hero-copy" data-reveal>
-      <p class="eyebrow">{{ site.Params.descriptor }}</p>
-      <h1 id="hero-title">VERA Lab</h1>
-      <p class="academic-tagline">Trustworthy &amp; Collaborative Intelligence</p>
-      <p class="academic-intro">We study how data, models, and people can learn together while preserving privacy, reliability, and practical value. Our work spans federated learning, trustworthy AI, model collaboration, and applications in healthcare, science, and industry.</p>
+      <h1 id="hero-title">{{ site.Params.lab_name }}</h1>
+      <p class="academic-tagline">{{ site.Params.descriptor }}</p>
+      <p class="academic-intro">Led by <a href="{{ (index site.Data.members.leadership 0).profile }}">Prof. Yang (Veronica) Liu</a> at The Hong Kong Polytechnic University, we study how AI models can learn together when data must stay private. We develop federated learning methods for organizations that hold different parts of a dataset, and study how small models on personal devices can work with larger models in the cloud. Our applications span healthcare, science, and industry.</p>
       <div class="academic-links">
         <a href="{{ relURL "research/" }}">Research</a>
         <a href="{{ relURL "people/" }}">People</a>
@@ -19,7 +18,7 @@
 <section class="home-people section" aria-labelledby="home-people-title">
   <div class="shell">
     <div class="section-title-row" data-reveal>
-      <div><p class="eyebrow">People</p><h2 id="home-people-title">Our lab</h2></div>
+      <h2 id="home-people-title">People</h2>
       <a href="{{ relURL "people/" }}">Meet everyone →</a>
     </div>
     <div class="home-people-group">
@@ -59,8 +58,8 @@
 
 <section class="featured academic-publications" aria-labelledby="featured-title">
   <div class="shell">
-    <div class="section-title-row" data-reveal><div><p class="eyebrow">Selected publications</p><h2 id="featured-title">Recent work</h2></div><a href="{{ relURL "publications/" }}">View all publications →</a></div>
-    <div class="paper-list paper-list--home">{{ range first 3 site.Data.publications }}{{ partial "publication-card.html" (dict "publication" . "heading" "h3") }}{{ end }}</div>
+    <div class="section-title-row" data-reveal><h2 id="featured-title">Selected publications</h2><a href="{{ relURL "publications/" }}">View all publications →</a></div>
+    <div class="paper-list paper-list--home">{{ range sort (where site.Data.publications "featured_order" "gt" 0) "featured_order" }}{{ partial "publication-card.html" (dict "publication" . "heading" "h3") }}{{ end }}</div>
   </div>
 </section>
 {{ end }}

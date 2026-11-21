@@ -1,12 +1,12 @@
 baseURL: "https://vera-lab-polyu.github.io/"
 languageCode: "en-us"
-title: "VERA Lab"
+title: "VEAR AI Lab"
 enableRobotsTXT: true
 disableKinds: [taxonomy, term, RSS]
 
 params:
-  lab_name: "VERA Lab"
-  short_name: "VERA"
+  lab_name: "VEAR AI Lab"
+  short_name: "VEAR"
   descriptor: "Trustworthy & Collaborative Intelligence"
   affiliation: "The Hong Kong Polytechnic University"
   description: "Trustworthy and collaborative intelligence across data, models, agents, and domains."

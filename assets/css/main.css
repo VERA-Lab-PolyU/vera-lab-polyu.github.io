@@ -570,6 +570,7 @@ body::before { display: none; }
 .paper-authors { margin-top: 8px; font-size: 11px; }
 .paper-venue { margin-top: 8px; font-size: 10px; }
 .paper-content .publication-links { padding-top: 12px; }
+.paper-content:only-child { grid-column: 1 / -1; }
 .publication-links { gap: 15px; }
 .publication-links a { color: var(--coral-dark); font-size: 10px; }
 

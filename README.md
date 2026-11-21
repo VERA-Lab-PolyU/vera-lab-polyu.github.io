@@ -20,12 +20,7 @@ The generated site is written to `public/`.
 
 ## Deployment
 
-The production site is published at <https://vera-lab-polyu.github.io/>.
-Pushes to `main` trigger `.github/workflows/deploy-pages.yml`, which builds the
-Hugo source and deploys the generated `public/` directory with GitHub Pages.
-
-Before the first deployment, set the repository's Pages source to **GitHub
-Actions** under **Settings → Pages**.
+Use the local Hugo server for previews. Both Pages workflows require a manual run.
 
 ## Common updates
 

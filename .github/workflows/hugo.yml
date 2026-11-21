@@ -2,7 +2,7 @@
 name: Deploy Hugo site to Pages
 
 on:
-  # deploy-pages.yml handles pushes with the site's current Hugo version.
+  # Manual publishing only.
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages

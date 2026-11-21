@@ -59,7 +59,13 @@
 <section class="featured academic-publications" aria-labelledby="featured-title">
   <div class="shell">
     <div class="section-title-row" data-reveal><h2 id="featured-title">Selected publications</h2><a href="{{ relURL "publications/" }}">View all publications →</a></div>
-    <div class="paper-list paper-list--home">{{ range sort (where site.Data.publications "featured_order" "gt" 0) "featured_order" }}{{ partial "publication-card.html" (dict "publication" . "heading" "h3") }}{{ end }}</div>
+    <div class="paper-list paper-list--home">
+      {{ range sort (where site.Data.publications "featured_order" "gt" 0) "featured_order" }}
+        {{ if and .accepted (in (split .authors ", ") "Yang Liu") }}
+          {{ partial "publication-card.html" (dict "publication" . "heading" "h3") }}
+        {{ end }}
+      {{ end }}
+    </div>
   </div>
 </section>
 {{ end }}

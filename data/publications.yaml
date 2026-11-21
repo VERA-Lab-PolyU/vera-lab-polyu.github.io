@@ -59,6 +59,7 @@
 - venue: "KDD 2025"
   title: "HtFLlib: A Comprehensive Heterogeneous Federated Learning Library and Benchmark"
   featured_order: 1
+  accepted: true
   authors: "Jianqing Zhang, Xinghao Wu, Yanbing Zhou, Xiaoting Sun, Qiqi Cai, Yang Liu, Yang Hua, Zhenzhe Zheng, Jian Cao, Qiang Yang"
   note: "Runner-Up Best Paper · Dataset & Benchmark Track"
   image: "/images/publications/htfllib.png"
@@ -85,6 +86,8 @@
 
 - venue: "ICML 2025"
   title: "Contrastive Private Data Synthesis via Weighted Multi-PLM Fusion"
+  featured_order: 3
+  accepted: true
   authors: "Tianyuan Zou, Yang Liu, Peng Li, Yufei Xiong, Jianqing Zhang, Jingjing Liu, Xiaozhou Ye, Ye Ouyang, Ya-Qin Zhang"
   note: "WASP"
   image: "/images/publications/wasp.png"
@@ -99,6 +102,7 @@
 - venue: "ICML 2025"
   title: "PCEvolve: Private Contrastive Evolution for Synthetic Dataset Generation via Few-Shot Private Data and Generative APIs"
   featured_order: 2
+  accepted: true
   authors: "Jianqing Zhang, Yang Liu, Jie Fu, Yang Hua, Tianyuan Zou, Jian Cao, Qiang Yang"
   note: "Spotlight"
   image: "/images/publications/pcevolve.png"
@@ -141,7 +145,6 @@
   title: "Poison as Cure: Visual Noise for Mitigating Object Hallucinations in LVMs"
   authors: "Kejia Zhang, Keda Tao, Jiasheng Tang, Huan Wang"
   primary_url: "https://papers.neurips.cc/paper_files/paper/2025/hash/5f868c3e0050f13ec82d3694df531de1-Abstract-Conference.html"
-  featured_order: 3
   image: "/images/publications/VAP.png"
   image_alt: "Figure from Poison as Cure: Visual Noise for Mitigating Object Hallucinations in LVMs"
 
